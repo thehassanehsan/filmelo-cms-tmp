@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 240 5% 90%;
+    --card: 180 50% 8%;
+    --card-foreground: 240 5% 90%;
+    --popover: 180 50% 8%;
+    --popover-foreground: 240 5% 90%;
+    --primary: 78 100% 64%;
+    --primary-foreground: 180 80% 13%;
+    --secondary: 180 20% 15%;
+    --secondary-foreground: 240 5% 90%;
+    --muted: 180 10% 20%;
+    --muted-foreground: 180 10% 55%;
+    --accent: 180 20% 15%;
+    --accent-foreground: 240 5% 90%;
+    --destructive: 330 100% 65%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 180 15% 15%;
+    --input: 180 15% 15%;
+    --ring: 78 100% 64%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: #09090B;
+    color: #E4E4E7;
+    font-family: 'Alexandria', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Alexandria', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .filmelo-card {
+    @apply bg-[#0A2426] border border-[#1A3A3D] rounded-2xl p-6;
+  }
+
+  .filmelo-input {
+    @apply w-full px-4 py-3 rounded-lg bg-[#09090B] border border-[#1A3A3D] text-white placeholder:text-[#3F3F46] focus:outline-none focus:ring-2 focus:ring-[#CFFF4A] focus:border-transparent transition-all;
+  }
+
+  .filmelo-btn {
+    @apply px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200;
+  }
+
+  .filmelo-btn-primary {
+    @apply filmelo-btn bg-[#CFFF4A] text-[#08383A] hover:bg-white hover:shadow-[0_0_15px_rgba(207,255,74,0.3)];
+  }
+
+  .filmelo-btn-secondary {
+    @apply filmelo-btn bg-[#112224] text-white border border-[#1A3A3D] hover:bg-[#1A3A3D];
+  }
+
+  .filmelo-btn-danger {
+    @apply filmelo-btn bg-[#FF4DA6]/20 text-[#FF4DA6] hover:bg-[#FF4DA6]/30;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #1A3A3D;
+    border-radius: 3px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: #3F3F46;
+  }
+}
+
+@layer utilities {
+  .text-filmelo-neon {
+    color: #CFFF4A;
+  }
+  .text-filmelo-pink {
+    color: #FF4DA6;
+  }
+  .bg-filmelo-dark {
+    background-color: #09090B;
+  }
+  .bg-filmelo-emerald {
+    background-color: #08383A;
+  }
+  .bg-filmelo-neon {
+    background-color: #CFFF4A;
+  }
+  .bg-filmelo-card {
+    background-color: #112224;
+  }
+  .border-filmelo-neon {
+    border-color: #CFFF4A;
+  }
+  .border-filmelo-pink {
+    border-color: #FF4DA6;
+  }
+}
